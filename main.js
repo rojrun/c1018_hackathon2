@@ -1,9 +1,10 @@
-$(document).ready(startApp);
+$(document).ready(initializeApp)
 
-function startApp () {
-    getData()
+function initializeApp(){
+    //$(".randomizerButton").click(modulePopUp)
+    $(".randomizerButton").click(modulePopUp)
+    getData();
 }
-
 
 function getData() {
     var ajaxOptions = {
@@ -23,4 +24,21 @@ function getData() {
         console.log(response);
     })
 }
+
+
+
+function modulePopUp(){
+    console.log('hi')
+    var moduleBox = $('<div>',{
+        class: 'module', 
+    })
+    $('.bodyContainer').append(moduleBox)
+
+}
+
+
+// function openModal(message){
+//     $("#myModal").modal("show");
+//     $(".modal-body > p").text(message);
+//  }
 

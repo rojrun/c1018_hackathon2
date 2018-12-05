@@ -25,8 +25,6 @@ function getData() {
     })
 }
 
-
-
 function modulePopUp(){
     console.log('hi')
     var moduleBox = $('<div>',{

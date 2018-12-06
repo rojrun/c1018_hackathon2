@@ -1,21 +1,21 @@
-$(document).ready(initializeApp)
+$(document).ready(initializeApp);
 
 function initializeApp(){
-    $(".randomizerButton").click(openModal);
-    // var coordFinder = new Coordinates("2427+Malibu+Way+Del+Mar,+CA+92014");
-    // coordFinder.getCoords(initMap)
+    $(".randomizerButton").click(createMeal);
+}
+
+function createMeal(){
+    $(".title").hide();
+    $(".randomizerButton").hide();
     var beer = new Beer();
     var youTube = new Youtube();
     var recipe = new Recipes();
-    recipe.getRecipeData(youTube.getData)
+    recipe.getRecipeData(youTube.getData);
 }
 
-
-function openModal(){
-    $("#myModal").modal("show");
-    $(".modal-body > p").text('balls');
- }
 function initMap(location, title) {
+    var createMap = $("<div>").attr("id", "map");
+    $(".backgroundImage").append(createMap);
     var newLocation = location;
     var brewery = title
     var map = new google.maps.Map(
@@ -28,5 +28,4 @@ function initMap(location, title) {
         info.open(map, marker);
       });
   }
-
 

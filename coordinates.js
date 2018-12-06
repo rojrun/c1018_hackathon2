@@ -1,6 +1,6 @@
 class Coordinates{
     constructor(address){
-        this.address = address
+        this.address = address;
     }
     getCoords( callback, title ){ 
         let addressObject = {
@@ -11,7 +11,7 @@ class Coordinates{
                     key: 'AIzaSyBwpExu5jdrkegxTZJE5VIKAJ7ED_yWTFE',
                     address: this.address
             } 
-        }
+        };
         $.ajax(addressObject).then(function(response){
             let newCoordinates = response.results[0].geometry.location;
             callback(newCoordinates, title);

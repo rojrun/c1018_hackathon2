@@ -5,7 +5,6 @@ function start(){
     drink = new Beer;
 }
 
-
 class Beer {
     constructor (){
         this.getRandomBeer = this.getRandomBeer();

@@ -9,7 +9,7 @@ class Youtube{
             method: 'post',
             dataType: 'json',
             data: {
-                q: recipeTitle,
+                q: "how to cook " + recipeTitle,
                 maxResults: 1,
                 type: 'video',
     
@@ -19,6 +19,7 @@ class Youtube{
             console.log(response);
             let videoUrl = response.video[0].id
             $('iframe').attr('src', "https://www.youtube.com/embed/"+videoUrl);
+            $('.modal-body').append(recipeTitle)
         })
     }
 

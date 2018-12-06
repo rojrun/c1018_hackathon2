@@ -9,11 +9,11 @@ function initializeApp(){
     recipe.getRecipeData(youTube.getData)
 }
 
-
 function openModal(){
     $("#myModal").modal("show");
     $(".modal-body > p").text('balls');
  }
+ 
 function initMap(location) {
     // The location of Uluru
     console.log('init map location: ',location);

@@ -2,7 +2,7 @@ $(document).ready(initializeApp)
 
 function initializeApp(){
     //$(".randomizerButton").click(modulePopUp)
-    $(".randomizerButton").click(modulePopUp)
+    $(".randomizerButton").click(openModal);
     getData();
 }
 
@@ -25,18 +25,8 @@ function getData() {
     })
 }
 
-function modulePopUp(){
-    console.log('hi')
-    var moduleBox = $('<div>',{
-        class: 'module', 
-    })
-    $('.bodyContainer').append(moduleBox)
-
-}
-
-
-// function openModal(message){
-//     $("#myModal").modal("show");
-//     $(".modal-body > p").text(message);
-//  }
+function openModal(){
+    $("#myModal").modal("show");
+    $(".modal-body > p").text('balls');
+ }
 

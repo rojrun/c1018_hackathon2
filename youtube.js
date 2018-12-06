@@ -1,9 +1,7 @@
 class Youtube{
     constructor(){
     }
-
     getData(recipeTitle) {
-        console.log("get data is running with" , recipeTitle)
         var ajaxOptions = {
             url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
             method: 'post',
@@ -12,7 +10,6 @@ class Youtube{
                 q: "how to cook " + recipeTitle,
                 maxResults: 1,
                 type: 'video',
-    
             }
         };
         $.ajax(ajaxOptions).then(function (response) {
@@ -27,6 +24,10 @@ class Youtube{
             })
             $('.modal-body').append(recipeTitleToDom)
         })
+            let videoUrl = response.video[0].id;
+            let iframe = $("<iframe>").attr('src', "https://www.youtube.com/embed/" + videoUrl);
+            $(".backgroundImage").append(iframe);
+        });
     }
 }
 

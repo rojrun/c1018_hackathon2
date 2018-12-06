@@ -1,9 +1,9 @@
 class Coordinates{
     constructor(address){
-        this.address = address
+        this.address = address;
     }
-    
-    getCoords( callback ){ 
+    getCoords( callback, title ){ 
+
         let addressObject = {
             url: "https://maps.googleapis.com/maps/api/geocode/json?",
             dataType: 'json',
@@ -12,11 +12,10 @@ class Coordinates{
                     key: 'AIzaSyBwpExu5jdrkegxTZJE5VIKAJ7ED_yWTFE',
                     address: this.address
             } 
-        }
+        };
         $.ajax(addressObject).then(function(response){
             let newCoordinates = response.results[0].geometry.location;
-            console.log(newCoordinates);
-            callback(newCoordinates);
+            callback(newCoordinates, title);
         })
     }
 }

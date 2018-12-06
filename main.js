@@ -5,6 +5,9 @@ function initializeApp(){
     $(".randomizerButton").click(modulePopUp)
     var coordFinder = new Coordinates("2427+Malibu+Way+Del+Mar,+CA+92014");
     coordFinder.getCoords(initMap)
+    var youTube = new Youtube();
+    var recipe = new Recipes();
+    recipe.getRecipeData(youTube.getData)
 }
 function modulePopUp(){
     console.log('hi')
@@ -24,7 +27,9 @@ function initMap(location) {
     var marker = new google.maps.Marker({position: uluru, map: map});
   }
 
-
-
+function openModal(message){
+    $("#myModal").modal("show");
+    $(".modal-body > p").text(message);
+ }
 
 

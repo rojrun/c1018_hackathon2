@@ -3,24 +3,27 @@
 
 <head>
     <title> Hackathon </title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="main.js"></script>
-    <link rel="stylesheet" href="css.css">
-</head>
+    <script src="coordinates.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwpExu5jdrkegxTZJE5VIKAJ7ED_yWTFE">
+    </script>
+    </head>
 
 
 <body>
     <div class="headerContainer">
         <h1 class='header'>
-            Whats for dinner
-
+            Whats for dinner?
         </h1>
     </div>
 
     <div class="bodyContainer">
         <button type="button" class="randomizerButton"> Click me for a dinner idea</button>
-
-
+        <div id="map"></div>
     </div>
 
 <!-- Modal -->
@@ -49,4 +52,5 @@
 
 
 </body>
+
 </html>

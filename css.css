@@ -31,3 +31,7 @@ body{
     margin: auto;
     background-color: purple;
 }
+#map{
+    height: 400px;
+    width: 400px;
+}

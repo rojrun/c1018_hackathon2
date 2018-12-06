@@ -22,7 +22,7 @@ function initMap(location) {
     var uluru = location
     // The map, centered at Uluru
     var map = new google.maps.Map(
-        $('#map')[0], {zoom: 6, center: uluru});
+        $('#map')[0], {zoom: 12, center: uluru});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: uluru, map: map});
   }

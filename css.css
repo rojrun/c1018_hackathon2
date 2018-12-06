@@ -52,3 +52,17 @@ body{
     width: 400px;
 }
 
+.recipeTitle{
+    font-size:50px;
+    color: purple;
+}
+
+.beerName{
+    font-size:25px;
+    color: blue;
+}
+
+.beerDescription{
+    font-size: 25px;
+    color: green;
+}

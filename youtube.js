@@ -19,11 +19,15 @@ class Youtube{
             console.log(response);
             let videoUrl = response.video[0].id
             $('iframe').attr('src', "https://www.youtube.com/embed/"+videoUrl);
-            $('.modal-body').append(recipeTitle)
+            var recipeTitleToDom = recipeTitle
+    
+            recipeTitleToDom = $('<div>',{
+                class: 'recipeTitle',
+                text: recipeTitleToDom
+            })
+            $('.modal-body').append(recipeTitleToDom)
         })
     }
-
-
 }
 
 

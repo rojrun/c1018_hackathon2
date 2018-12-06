@@ -7,23 +7,25 @@ function initializeApp(){
 function createMeal(){
     $(".title").hide();
     $(".randomizerButton").hide();
-    var coordFinder = new Coordinates("2427+Malibu+Way+Del+Mar,+CA+92014");
-    coordFinder.getCoords(initMap);
     var beer = new Beer();
     var youTube = new Youtube();
     var recipe = new Recipes();
     recipe.getRecipeData(youTube.getData);
 }
 
-function initMap(location) {
+function initMap(location, title) {
     var createMap = $("<div>").attr("id", "map");
     $(".backgroundImage").append(createMap);
-    // The location of Uluru
-    console.log('init map location: ',location);
-    var uluru = location;
-    // The map, centered at Uluru
+    var newLocation = location;
+    var brewery = title
     var map = new google.maps.Map(
-        $('#map')[0], {zoom: 12, center: uluru});
-    // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: uluru, map: map});
-}
+        $('#map')[0], {zoom: 6, center: newLocation});
+    var marker = new google.maps.Marker({position: newLocation, map: map });
+    var info = new google.maps.InfoWindow({
+        content: title
+    })
+    marker.addListener('click', function() {
+        info.open(map, marker);
+      });
+  }
+

@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    background-color: peachpuff
+}
+
+.headerContainer{
+    width: 100vw;
+    height: 100vh;
+}
+
+.randomizerButton{
+    align-content: center;
+}
+
+.header{
+    height: 35%;
+    background-color: red;
+    text-align: center;
+    margin: 0;
+    font-size:80px;
+}
+
+.module{
+    z-index: 1;
+    color: black;
+    position: relative;
+    top: 20%;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    background-color: purple;
+}
+#map{
+    height: 400px;
+    width: 400px;
+}

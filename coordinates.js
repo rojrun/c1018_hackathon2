@@ -3,6 +3,7 @@ class Coordinates{
         this.address = address;
     }
     getCoords( callback, title ){ 
+
         let addressObject = {
             url: "https://maps.googleapis.com/maps/api/geocode/json?",
             dataType: 'json',

@@ -2,12 +2,14 @@ class Recipes{
     constructor(){
         this.callBack = null;
         this.sendDataToYoutube = this.sendDataToYoutube.bind(this);
+        this.randomNumber1 = Math.floor(Math.random()*25)+1
+        this.randomNumber2 = Math.floor(Math.random()*100)+1
     }
 
     sendDataToYoutube( recipeData ){
         console.log(recipeData);
         if(recipeData.count>0){
-            this.callBack( recipeData.recipes[0].title);
+            this.callBack( recipeData.recipes[this.randomNumber1].title);
         }
     }
 
@@ -19,8 +21,8 @@ class Recipes{
             dataType: 'json',
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
-                page: '2',
-                q: 'steak'
+                page: this.randomNumber2
+                //q: 'chicken%20breast',
             }
         }
 
@@ -29,8 +31,4 @@ class Recipes{
 
 }
 
-
-    //  $.ajax(recipeObject).then(response => this.organResponse(paramaters).fail())
-    //      console.log(response)
-    
 

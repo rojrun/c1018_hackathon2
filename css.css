@@ -39,6 +39,20 @@ iframe{
     height: 44%;
 }
 
+.recipeTitle{
+    font-size:50px;
+    color: purple;
+}
+
+.beerName{
+    font-size:25px;
+    color: blue;
+}
+
+.beerDescription{
+    font-size: 25px;
+    color: green;
+
 #map{
     height: 44%;
     width: 32%;

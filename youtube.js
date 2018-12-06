@@ -1,9 +1,7 @@
 class Youtube{
     constructor(){
     }
-
     getData(recipeTitle) {
-        console.log("get data is running with" , recipeTitle)
         var ajaxOptions = {
             url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
             method: 'post',

@@ -5,6 +5,7 @@ class Recipes{
     }
 
     sendDataToYoutube( recipeData ){
+        console.log(recipeData);
         if(recipeData.count>0){
             this.callBack( recipeData.recipes[0].title);
         }
@@ -19,12 +20,11 @@ class Recipes{
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
                 page: '2',
-                //q: 'chicken%20breast',
+                q: 'steak'
             }
         }
 
             $.ajax(recipeObject).then( this.sendDataToYoutube )
-            
     }
 
 }

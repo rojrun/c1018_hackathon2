@@ -22,9 +22,6 @@ class Beer {
             console.log(response);
             var beerName = response.data.name;
             var beerDescription = response.data.style.description;
-            console.log(beerDescription);
-            // var shortenedBeerDescription = beerDescription.substring(0,1000) + "..."
-            debugger;
             $('#beerName').text('Your random beer is ' + beerName + ': \n');
             $('#beerDescription').text('Description: ' + beerDescription).css('overflow-y', 'scroll');
             let breweryName = response.data.breweries[0].name;

@@ -14,12 +14,9 @@ function createMeal(){
 }
 
 function initMap(location, title) {
-    var createMap = $("<div>").attr("id", "map");
-    $(".backgroundImage").append(createMap);
     var newLocation = location;
-    var brewery = title
     var map = new google.maps.Map(
-        $('#map')[0], {zoom: 6, center: newLocation});
+        $('.map')[0], {zoom: 6, center: newLocation});
     var marker = new google.maps.Marker({position: newLocation, map: map });
     var info = new google.maps.InfoWindow({
         content: title

@@ -13,22 +13,11 @@ class Youtube{
             }
         };
         $.ajax(ajaxOptions).then(function (response) {
-            console.log(response);
-            let videoUrl = response.video[0].id
-            $('iframe').attr('src', "https://www.youtube.com/embed/"+videoUrl);
-            var recipeTitleToDom = recipeTitle
-    
-            recipeTitleToDom = $('<div>',{
-                class: 'recipeTitle',
-                text: recipeTitleToDom
-            })
-            $('.modal-body').append(recipeTitleToDom)
-        })
+            $('.recipe').text(recipeTitle);
             let videoUrl = response.video[0].id;
             let iframe = $("<iframe>").attr('src', "https://www.youtube.com/embed/" + videoUrl);
-            $(".backgroundImage").append(iframe);
-        });
+            $(".youtube").append(iframe);
+        })
     }
 }
-
 

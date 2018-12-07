@@ -11,7 +11,7 @@ body{
 .main_content{
     height: 91%;
     width: 64%;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
     position: relative;
     left: 19%;
     top: 6%;
@@ -25,16 +25,23 @@ body{
     display: inline-block;
     height: 50%;
     width: 50%;
+    position: relative;
 }
 .title{
     text-align: center;
     height: 7%;
     width: 100%;
-    
 }
 
 .randomizerButton {
-    vertical-align: center;
+    font-size: 3rem;
+    top: 29%;
+    left: 26%;
+    position: relative;
+    background-color: #C84127;
+    z-index: 1;
+    height: 31%;
+    width: 44%;
 }
 
 iframe{

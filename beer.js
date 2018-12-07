@@ -23,7 +23,7 @@ class Beer {
             var beerName = response.data.name;
             var beerDescription = response.data.style.description
             var shortenedBeerDescription = beerDescription.substring(0,1000) + "..."
-            $('.beer').append(beerName + shortenedBeerDescription);
+            $('.beer').text(beerName + shortenedBeerDescription).css('overflow', 'scroll');
             let breweryName = response.data.breweries[0].name;
             let breweryAddress = response.data.breweries[0].locations[0].streetAddress;
             let breweryLocality = response.data.breweries[0].locations[0].locality;

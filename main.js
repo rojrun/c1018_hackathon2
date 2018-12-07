@@ -7,6 +7,7 @@ function initializeApp(){
 function createMeal(){
     $(".title").hide();
     $(".randomizerButton").hide();
+    $('#beerDescription').css('background-color', 'white')
     var beer = new Beer();
     var youTube = new Youtube();
     var recipe = new Recipes();

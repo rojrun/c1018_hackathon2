@@ -14,12 +14,10 @@ class Beer {
                 withBreweries: "Y",
             },
             errors: function(response){
-                console.log(response);
             }
         };
 
         $.ajax(ajaxOptions).then(function(response){
-            console.log(response);
             var beerName = response.data.name;
             var beerDescription = response.data.style.description;
             $('#beerName').text('Your random beer is ' + beerName + ': \n');

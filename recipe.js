@@ -7,7 +7,6 @@ class Recipes{
     }
 
     sendDataToYoutube( recipeData ){
-        console.log(recipeData);
         if(recipeData.count>0){
             this.callBack( recipeData.recipes[this.randomNumber1].title);
         }
@@ -22,7 +21,6 @@ class Recipes{
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
                 page: this.randomNumber2
-                //q: 'chicken%20breast',
             }
         }
 

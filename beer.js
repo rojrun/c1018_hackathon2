@@ -19,22 +19,11 @@ class Beer {
         };
 
         $.ajax(ajaxOptions).then(function(response){
+            console.log(response);
             var beerName = response.data.name;
             var beerDescription = response.data.style.description
             var shortenedBeerDescription = beerDescription.substring(0,1000) + "..."
-            shortenedBeerDescription = $('<div>',{
-                text: shortenedBeerDescription,
-                class: 'beerDescription'
-            })
-            beerName = $('<div>',{
-                text: beerName,
-                class: 'beerName'
-            })
-            $('.modal-body').append(beerName);
-            $('.modal-body').append(shortenedBeerDescription);
-            var breweryName = response.data.breweries[0].name;
-            var breweryAddress = response.data.breweries[0].locations[0].streetAddress;
-            var breweryPostalCode = response.data.breweries[0].locations[0].streetAddress.postalCode;
+            $('.beer').append(beerName + shortenedBeerDescription);
             let breweryName = response.data.breweries[0].name;
             let breweryAddress = response.data.breweries[0].locations[0].streetAddress;
             let breweryLocality = response.data.breweries[0].locations[0].locality;

@@ -2,58 +2,52 @@ body{
     height: 100vh;
     width: 100vw;
     margin: 0;
-}
-
-.backgroundImage {
-    width: 100%;
-    height: 100%;
     background-image: url('carving board.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat
 }
 
-.title {
-    top: 30%;
-    left: 24%;
+.main_content{
+    height: 91%;
+    width: 64%;
+    border: 2px solid white;
+    position: relative;
+    left: 19%;
+    top: 6%;
     font-size: 7rem;
     color: aqua;
-    position: absolute;
-    display: block;
     font-weight: 800;
+    display: flex;
+    flex-flow: row wrap;
+}
+.content{
+    display: inline-block;
+    height: 50%;
+    width: 50%;
+}
+.title{
+    text-align: center;
+    height: 7%;
+    width: 100%;
+    
 }
 
 .randomizerButton {
-    left: 37%;
-    position: relative;
-    top: 54%;
-    align-content: center;
-    padding: 1%;
-    font-size: 3rem;
-    background-color: #C84127;
-    color: #FEFCE8;
+    vertical-align: center;
 }
 
 iframe{
-    width: 36%;
-    height: 44%;
+    width: 100%;
+    height: 100%;
 }
 
-.recipeTitle{
+.receipe{
     font-size:50px;
     color: purple;
 }
 
-.beerName{
+.beer{
     font-size:25px;
     color: blue;
-}
-
-.beerDescription{
-    font-size: 25px;
-    color: green;
-
-#map{
-    height: 44%;
-    width: 32%;
 }

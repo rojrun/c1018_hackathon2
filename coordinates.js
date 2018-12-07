@@ -15,6 +15,7 @@ class Coordinates{
         };
         $.ajax(addressObject).then(function(response){
             let newCoordinates = response.results[0].geometry.location;
+            console.log('getting some coords');
             callback(newCoordinates, title);
         })
     }

@@ -21,9 +21,12 @@ class Beer {
         $.ajax(ajaxOptions).then(function(response){
             console.log(response);
             var beerName = response.data.name;
-            var beerDescription = response.data.style.description
-            var shortenedBeerDescription = beerDescription.substring(0,1000) + "..."
-            $('.beer').append(beerName + shortenedBeerDescription);
+            var beerDescription = response.data.style.description;
+            console.log(beerDescription);
+            // var shortenedBeerDescription = beerDescription.substring(0,1000) + "..."
+            debugger;
+            $('#beerName').text('Your random beer is ' + beerName + ': \n');
+            $('#beerDescription').text('Description: ' + beerDescription).css('overflow-y', 'scroll');
             let breweryName = response.data.breweries[0].name;
             let breweryAddress = response.data.breweries[0].locations[0].streetAddress;
             let breweryLocality = response.data.breweries[0].locations[0].locality;

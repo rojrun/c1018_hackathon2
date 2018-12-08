@@ -44,5 +44,3 @@ function initMap(location, title) {
       });
 
   }
-
-

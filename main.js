@@ -2,6 +2,7 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".randomizerButton").click(createMeal);
+
 }
 
 function createMeal(){

@@ -27,9 +27,6 @@ body{
     font-size: 4rem;
     color: chartreuse;
 }
-.beer{
-    font-size: 2rem;
-}
 #beerName{
     font-size: 5rem;
     color: deepskyblue;
@@ -62,5 +59,18 @@ iframe{
     width: 100%;
     height: 100%;
 }
+
+
+.beer{
+    font-size: 2rem;
+}
+.beer{
+    font-size:25px;
+    fonnt-family: fanatasy;
+    color: white;
+    overflow: scroll;
+}
+
+
 
 

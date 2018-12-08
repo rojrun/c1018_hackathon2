@@ -21,7 +21,7 @@ class Beer {
             var beerName = response.data.name;
             var beerDescription = response.data.style.description;
             $('#beerName').text('Your random beer is ' + beerName + ': \n');
-            $('#beerDescription').text('Description: ' + beerDescription).css('overflow-y', 'scroll');
+            $('#beerDescription').text('Description: ' + beerDescription);
             let breweryName = response.data.breweries[0].name;
             let breweryAddress = response.data.breweries[0].locations[0].streetAddress;
             let breweryLocality = response.data.breweries[0].locations[0].locality;

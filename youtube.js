@@ -13,7 +13,7 @@ class Youtube{
             }
         };
         $.ajax(ajaxOptions).then(function (response) {
-            $('.recipe').text(recipeTitle);
+            $('.recipe').text("Your random recipe is "+recipeTitle);
             let videoUrl = response.video[0].id;
             console.log(videoUrl);
             let iframe = $("<iframe>").attr('src',"https://www.youtube.com/embed/" + videoUrl);

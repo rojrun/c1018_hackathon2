@@ -8,7 +8,7 @@ class Recipes{
 
     sendDataToYoutube( recipeData ){
         if(recipeData.count>0){
-            this.callBack( recipeData.recipes[1].title);
+            this.callBack(recipeData.recipes[1].title);
         }
     }
 
@@ -28,13 +28,13 @@ class Recipes{
             
             $.ajax(recipeObject).then(function(response){
                 var recipeUrl = response.recipes[1].source_url;
+                //var recipeUrlEmbed = recipeUrl
                 console.log(recipeUrl);
                 let recipeIframe = $("<iframe>").attr('src', recipeUrl);
                 $('.recipe').append(recipeIframe);
             })
-            
-    }
 
+    }
 }
 
 

@@ -9,6 +9,46 @@ body{
     background-repeat: no-repeat
 }
 
+.landing {
+    height: 62%;
+    width: 50%;
+    font-size: 3em;
+    background-color: #66afe9;
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 18%;
+    left: 24%;
+}
+
+.column{
+    display: inline-block;
+    background-color: #2870ff;
+    width: 30%;
+    height: 86%;
+    position: relative;
+    top: 7%;
+    display: none;
+}
+
+.columnTitle{
+    display: none;
+}
+
+.left{
+    left: 15%;
+}
+.right{
+    left: 58%;
+}
+
+.columnTitle{
+    background-color: white;
+    text-align: center;
+    font-size: 2em;
+    color: #db28ff;
+}
+
 .main_content{
     height: 91%;
     width: 64%;
@@ -42,19 +82,21 @@ body{
 }
 .title{
     text-align: center;
+    font-size: 2em;
     height: 7%;
     width: 100%;
 }
 .randomizerButton {
     font-size: 3rem;
-    top: 29%;
-    left: 26%;
+    text-align: center;
+    top: 46%;
+    left: 22%;
     position: relative;
     background-color: #C84127;
-    z-index: 1;
-    height: 31%;
-    width: 44%;
-    border-radius: 13rem;
+    /* z-index: 1; */
+    height: 35%;
+    width: 57%;
+    border-radius: 5rem;
 }
 iframe{
     width: 100%;

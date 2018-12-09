@@ -1,6 +1,8 @@
 $(document).ready(initializeApp);
 
 function initializeApp(){
+    $(".column").hide();
+    $(".newRecipe").hide();
     $(".randomizerButton").click(createMeal);
     $('.newRecipe').click(recreateMeal)
 }
@@ -8,6 +10,8 @@ function initializeApp(){
 function createMeal(){
     $(".title").hide();
     $(".randomizerButton").hide();
+    $(".column").show();
+    $(".newRecipe").show();
     $('#beerDescription').css('background-color', 'white')
     var beer = new Beer();
     var youTube = new Youtube();

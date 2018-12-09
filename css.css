@@ -2,7 +2,8 @@ body{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-image: url('carving board.jpg');
+    /*background-image: url('carving board.jpg');*/
+    background-image: url('backPic2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat
@@ -69,6 +70,18 @@ iframe{
     font-size: 3rem;
     color: aqua;
 }
+
+.newBeer{
+    height: 12%;
+    width: 14%;
+    position: absolute;
+    border-radius: 13rem;
+    background-color: #C84127;
+    top: 10%;
+    font-size: 3rem;
+    color: aqua;
+    left: 86%;
+}
 #beerDescription{
     background-color: white;
     overflow-y: scroll;
@@ -79,7 +92,7 @@ iframe{
 }
 .beer{
     font-size:25px;
-    fonnt-family: fanatasy;
+    /*fonnt-family: fanatasy;*/
     color: white;
     overflow: scroll;
 }

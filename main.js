@@ -2,28 +2,40 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".randomizerButton").click(createMeal);
-    $('.newRecipe').click(recreateMeal)
+    $('.newRecipe').hide();
+    $('.newBeer').hide();
+    $('.newRecipe').click(recreateMeal);
+    $('.newBeer').click(recreateBeer);
+
 }
 
 function createMeal(){
     $(".title").hide();
     $(".randomizerButton").hide();
     $('#beerDescription').css('background-color', 'white')
+    $('.newRecipe').show();
+    $('.newBeer').show();
     var beer = new Beer();
     var youTube = new Youtube();
     var recipe = new Recipes();
     recipe.getRecipeData(youTube.getData);
 }
 function recreateMeal() {
-    $(".title").hide();
-    $(".randomizerButton").hide();
-    $('#beerDescription').css('background-color', 'white')
-    var beer = new Beer();
+    //$(".title").hide();
+    //$(".randomizerButton").hide();
+    //$('#beerDescription').css('background-color', 'white')
+    //var beer = new Beer();
+    $('iframe').remove()
     var youTube = new Youtube();
+    //new Youtube();
     var recipe = new Recipes();
+    //new Recipes();
     recipe.getRecipeData(youTube.getData);
 }
 
+function recreateBeer(){
+    new Beer();
+}
 
 function initMap(location, title) {
     var newLocation = location;

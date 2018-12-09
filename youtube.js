@@ -15,8 +15,10 @@ class Youtube{
         $.ajax(ajaxOptions).then(function (response) {
             $('.recipe').text(recipeTitle);
             let videoUrl = response.video[0].id;
-            let iframe = $("<iframe>").attr('src', "https://www.youtube.com/embed/" + videoUrl);
+            console.log(videoUrl);
+            let iframe = $("<iframe>").attr('src',"https://www.youtube.com/embed/" + videoUrl);
             $(".youtube").append(iframe);
+
         })
     }
 }

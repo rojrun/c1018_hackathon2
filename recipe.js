@@ -8,7 +8,7 @@ class Recipes{
 
     sendDataToYoutube( recipeData ){
         if(recipeData.count>0){
-            this.callBack( "Your random recipe is: " + recipeData.recipes[1].title);
+            this.callBack(recipeData.recipes[1].title);
         }
     }
 

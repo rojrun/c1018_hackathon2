@@ -21,24 +21,51 @@ body{
     display: flex;
     flex-flow: row wrap;
 }
-.content{
+.contentRecipe{
     display: inline-block;
-    height: 50%;
+    height: 97%;
     width: 50%;
     font-size: 4rem;
-    color: chartreuse;
+    color: aqua;
+    
 }
+
+.contentBeer{
+    overflow-y: scroll;
+    padding-left:2%;
+    padding-right:2%;
+    height:100%;
+    display:inline-block;
+    width: 50%;
+    font-size: 3rem;
+    color: aqua;
+}
+
+.recipe{
+    height:74%;
+}
+
+.youtube{
+    height:29%;
+}
+
 #beerName{
-    font-size: 5rem;
-    color: deepskyblue;
-    background-color: black;
+    font-size: 4rem;
+    color: aqua;
 }
 #beerDescription{
-    height: 67%;
+    height: 30%;
     color: black;
+    display:inline-block;
+    font-size:83%;
+
 }
 .map{
     color: black;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 33%;
 }
 .title{
     text-align: center;
@@ -82,10 +109,6 @@ iframe{
     color: aqua;
     left: 86%;
 }
-#beerDescription{
-    background-color: white;
-    overflow-y: scroll;
-}
 
 .beer{
     font-size: 2rem;
@@ -93,6 +116,5 @@ iframe{
 .beer{
     font-size:25px;
     /*fonnt-family: fanatasy;*/
-    color: white;
     overflow: scroll;
 }

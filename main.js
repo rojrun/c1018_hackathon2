@@ -12,7 +12,6 @@ function initializeApp(){
 function createMeal(){
     $(".title").hide();
     $(".randomizerButton").hide();
-    $('#beerDescription').css('background-color', 'white')
     $('.newRecipe').show();
     $('.newBeer').show();
     var beer = new Beer();
@@ -21,15 +20,9 @@ function createMeal(){
     recipe.getRecipeData(youTube.getData);
 }
 function recreateMeal() {
-    //$(".title").hide();
-    //$(".randomizerButton").hide();
-    //$('#beerDescription').css('background-color', 'white')
-    //var beer = new Beer();
     $('iframe').remove()
     var youTube = new Youtube();
-    //new Youtube();
     var recipe = new Recipes();
-    //new Recipes();
     recipe.getRecipeData(youTube.getData);
 }
 

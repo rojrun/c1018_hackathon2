@@ -8,7 +8,7 @@ class Recipes{
 
     sendDataToYoutube( recipeData ){
         if(recipeData.count>0){
-            this.callBack(recipeData.recipes[1].title);
+            this.callBack(recipeData.recipes[18].title);
         }
     }
 
@@ -20,7 +20,8 @@ class Recipes{
             dataType: 'json',
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
-                page: this.randomPageNumber
+                page: 1,
+                //page: this.randomPageNumber
             }
         }
 

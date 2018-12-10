@@ -18,7 +18,6 @@ class Youtube{
             console.log(videoUrl);
             let iframe = $("<iframe>").attr('src',"https://www.youtube.com/embed/" + videoUrl);
             $(".youtube").append(iframe);
-
         })
     }
 }

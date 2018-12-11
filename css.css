@@ -30,6 +30,10 @@ body{
     
 }
 
+.addScroll{
+    overflow-y: scroll;
+}
+
 .contentBeer{
     overflow-y: scroll;
     padding-left:2%;

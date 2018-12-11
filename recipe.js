@@ -8,7 +8,7 @@ class Recipes{
 
     sendDataToYoutube( recipeData ){
         if(recipeData.count>0){
-            this.callBack(recipeData.recipes[18].title);
+            this.callBack(recipeData.recipes[1].title);
         }
     }
 
@@ -20,11 +20,10 @@ class Recipes{
             dataType: 'json',
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
-                page: 1,
-                //page: this.randomPageNumber
+                //page: 8
+                page: this.randomPageNumber
             }
         }
-
             $.ajax(recipeObject).then(this.sendDataToYoutube)
             
             $.ajax(recipeObject).then(function(response){

@@ -1,26 +1,34 @@
 body{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    /*background-image: url('carving board.jpg');*/
-    background-image: url('backPic2.jpg');
+    background-image: url('blue-bar.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.title{
+    text-align: center;
+    width: 100%;
+    color: ghostwhite;
+    font-size: 5em;
 }
 
 .main_content{
-    height: 91%;
-    width: 64%;
-    position: relative;
-    left: 19%;
-    top: 6%;
-    font-size: 7rem;
+    /* height: 91%;
+    width: 64%; */
+    /* position: relative; */
+    /* left: 19%;
+    top: 6%; */
+    font-size: 4em;
     color: aqua;
     font-weight: 800;
     display: flex;
     flex-flow: row wrap;
 }
+
 .contentRecipe{
     display: inline-block;
     height: 97%;
@@ -71,11 +79,7 @@ body{
     width: 100%;
     height: 33%;
 }
-.title{
-    text-align: center;
-    height: 7%;
-    width: 100%;
-}
+
 .randomizerButton {
     font-size: 3rem;
     top: 29%;

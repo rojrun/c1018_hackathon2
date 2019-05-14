@@ -1,14 +1,15 @@
 class Beer {
-    constructor (){
+    constructor() {
         this.getRandomBeer = this.getRandomBeer();
     }
-    getRandomBeer (){
+
+    getRandomBeer() {
         let ajaxOptions = {
             dataType: 'json',
             url: 'proxies/randombeer.php',
             method:'get',
-            data:{
-                key: 'b9dea19c057881357318d0bd68522753',
+            data: {
+                key: 'def197d76d55031bee5776225d9007b4',
                 abv: "",
                 hasLabels: "Y",
                 withBreweries: "Y",
@@ -35,5 +36,3 @@ class Beer {
         });
     }
 }
-
-

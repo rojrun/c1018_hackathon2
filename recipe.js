@@ -20,10 +20,10 @@ class Recipes{
             dataType: 'json',
             data:{
                 key: '074b75a8150c14232378c4a730358dc3',
+                //page: 8
                 page: this.randomPageNumber
             }
         }
-
             $.ajax(recipeObject).then(this.sendDataToYoutube)
             
             $.ajax(recipeObject).then(function(response){

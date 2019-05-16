@@ -14,24 +14,22 @@ class Recipes {
 
     getRecipeData(callBack) {
         this.callBack = callBack;
-        let recipeObject = {
-            url: 'https://www.food2fork.com/api/search',
-            method: 'get',
-            dataType: 'json',
-            data:{
-                key: '074b75a8150c14232378c4a730358dc3',
+        var recipeObject = {
+            url: "https://www.food2fork.com/api/search",
+            method: "get",
+            dataType: "json",
+            data: {
+                key: "074b75a8150c14232378c4a730358dc3",
                 page: this.randomPageNumber
             }
         }
-            $.ajax(recipeObject).then(this.sendDataToYoutube);
-            
-            $.ajax(recipeObject).then(function(response){
-                var recipeUrl = response.recipes[1].source_url;
-                //var recipeUrlEmbed = recipeUrl
-                console.log(recipeUrl);
-                let recipeIframe = $("<iframe>").attr('src', recipeUrl);
-                $('.recipe').append(recipeIframe);
-            })
+
+        $.ajax(recipeObject).then(this.sendDataToYoutube);
+        
+        $.ajax(recipeObject).then(function(response){
+            var recipeUrl = response.recipes[1].source_url;
+            var recipeIframe = $("<iframe>").attr("src", recipeUrl).appendTo(".recipe");
+        });
     }
 }
 

@@ -1,6 +1,7 @@
-class Youtube{
-    // constructor(){
-    // }
+class Youtube {
+    constructor() {
+    }
+
     getData(recipeTitle) {
         var ajaxOptions = {
             url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
@@ -14,8 +15,8 @@ class Youtube{
         };
         $.ajax(ajaxOptions).then(function (response) {
             $('.recipe').text("Your random recipe is " + recipeTitle);
-            let videoUrl = response.video[0].id;
-            let iframe = $("<iframe>").attr('src',"https://www.youtube.com/embed/" + videoUrl).appendTo(".youtube");   
+            var videoUrl = response.video[0].id;
+            var iframe = $("<iframe>").attr('src',"https://www.youtube.com/embed/" + videoUrl).appendTo(".youtube");   
         });
     }
 }

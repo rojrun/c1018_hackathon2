@@ -5,15 +5,9 @@ function initializeApp() {
         location.reload();
     });
     var randomizerButton = $("<button>").addClass("randomizerButton").click(createMeal).text("Click for Random Munchies and Beer").appendTo(".main_content");
-    // $(".randomizerButton").click(createMeal);
-    // $('.newRecipe').hide();
-    // $('.newBeer').hide();
-    // $('.newRecipe').click(recreateMeal);
-    // $('.newBeer').click(recreateBeer);
 }
 
 function createMeal() {
-    // $(".title").hide();
     $(".randomizerButton").remove();
     
     var contentRecipe = $("<div>").addClass("contentRecipe").appendTo(".main_content");
@@ -25,8 +19,7 @@ function createMeal() {
     var newBeerBttn = $("<button>").addClass("newBeer").click(recreateBeer).text("New Beer").appendTo(".contentBeer");
     var beerDescription = $("<div>").addClass("beerDescription").appendTo("contentBeer");
     var beerMap = $("<div>").addClass("content map").appendTo("contentBeer");
-    // $('.newRecipe').show();
-    // $('.newBeer').show();
+    
     var beer = new Beer();
     var youTube = new Youtube();
     var recipe = new Recipes();
@@ -40,7 +33,7 @@ function recreateMeal() {
     recipe.getRecipeData(youTube.getData);
 }
 
-function recreateBeer(){
+function recreateBeer() {
     new Beer();
 }
 

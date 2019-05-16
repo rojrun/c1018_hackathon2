@@ -1,5 +1,10 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin: 0;
     background-image: url('blue-bar.jpg');
@@ -14,65 +19,57 @@ body {
     color: ghostwhite;
     font-size: 10em;
     margin: 2% auto;
-    text-shadow: 10px 10px #0010e4;
+    text-shadow: 10px 10px orangered;
     position: fixed;
     top: 0;
     width: 100%;
+    font-weight: 600;
+    z-index: 1;
 }
 
 .main_content {
-    /* height: 91%;
-    width: 64%; */
-    /* position: relative; */
-    /* left: 19%;
-    top: 6%; */
-    /* font-size: 4em;
-    color: aqua;
-    font-weight: 800; */
     display: flex;
     flex-flow: row wrap;
     margin-top: 14vh;
+    height: 86%;
+}
+
+.randomizerButton, .newRecipe, .newBeer {
+    background: rgba(255, 69, 0, 0.5);
+    border-radius: 1em;
+    color: white;
 }
 
 .randomizerButton {
     font-size: 6em;
-    color: white;
-    /* top: 29%; */
-    /* left: 26%; */
-    /* position: relative; */
-    background-color: #6d2f18;
-    opacity: 0.8;
-    /* z-index: 1; */
-    /* height: 31%; */
     width: 80%;
-    border-radius: 1em;
     margin: auto;
-    /* position: absolute; */
-    transform: translateY(6em);
 }
 
-.contentRecipe {
+.contentRecipe, .contentBeer {
     width: 95%;
-    margin: 0 auto;
+    margin: 2% auto;
+    height: 70%;
 }
 
-.newRecipe{
+.newRecipe, .newBeer {
     width: 50%;
-    border-radius: 1em;
-    background-color: #C84127;
-    color: aqua;
     font-size: 3em;
-    /* display: inline-block;
-    vertical-align: top; */
 }
 
-.recipe{
-    height: 80%;
+.recipe {
+    height: 44%;
     font-size: 4em;
     color: white;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.youtube{
+.youtube {
+    height: 50%;
+}
+
+iframe {
+    width: 100%;
     height: 100%;
 }
 
@@ -80,21 +77,7 @@ body {
     overflow-y: scroll;
 } */
 
-/* .newBeer{
-    height: 12%;
-    width: 14%;
-    position: absolute;
-    border-radius: 13rem;
-    background-color: #C84127;
-    top: 10%;
-    font-size: 3rem;
-    color: aqua;
-    left: 86%;
-}
-
-
-
-.contentBeer{
+/* .contentBeer{
     overflow-y: scroll;
     padding-left:2%;
     padding-right:2%;
@@ -103,21 +86,21 @@ body {
     width: 50%;
     font-size: 3rem;
     color: aqua;
-}
-
-
+} */
 
 #beerName{
     font-size: 4rem;
     color: aqua;
 }
+
 #beerDescription{
     height: 30%;
     color: black;
     display:inline-block;
     font-size:83%;
 
-} */
+}
+
 .map{
     color: black;
     position: relative;
@@ -126,22 +109,15 @@ body {
     height: 33%;
 }
 
-
-iframe{
-    width: 100%;
-    height: 100%;
-}
-
-
 .beer{
     font-size: 2rem;
 }
+
 .beer{
     font-size:25px;
-    /*fonnt-family: fanatasy;*/
     overflow: scroll;
 }
 
-.title:hover, .randomizerButton:hover {
+.title:hover, .randomizerButton:hover, .newRecipe:hover, .newBeer:hover {
     cursor: pointer;
 }

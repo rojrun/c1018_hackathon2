@@ -17,8 +17,9 @@ function createMeal() {
 
     var contentBeer = $("<div>").addClass("contentBeer").appendTo(".main_content");
     var newBeerBttn = $("<button>").addClass("newBeer").click(recreateBeer).text("New Beer").appendTo(".contentBeer");
-    var beerDescription = $("<div>").addClass("beerDescription").appendTo("contentBeer");
-    var beerMap = $("<div>").addClass("content map").appendTo("contentBeer");
+    var beerName = $("<div>").addClass("beerName").appendTo(".contentBeer");
+    var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
+    var beerMap = $("<div>").addClass("map").appendTo(".contentBeer");
     
     var beer = new Beer();
     var youTube = new Youtube();
@@ -27,7 +28,7 @@ function createMeal() {
 }
 
 function recreateMeal() {
-    $('iframe').remove()
+    $(".youtubeFrame").remove(); 
     var recipe = new Recipes();
     var youTube = new Youtube();
     recipe.getRecipeData(youTube.getData);
@@ -41,7 +42,7 @@ function initMap(location, title) {
     var newLocation = location;
     var map = new google.maps.Map(
         $('.map')[0], {zoom: 6, center: newLocation});
-    var image = '205339134Untitled-3-512.png';
+    var image = 'beerglasses.png';
     var marker = new google.maps.Marker({
         icon: image,
         position: newLocation,
@@ -53,5 +54,5 @@ function initMap(location, title) {
     });
     marker.addListener('click', function() {
         info.open(map, marker);
-      });
+    });
 }

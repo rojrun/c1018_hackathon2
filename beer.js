@@ -5,11 +5,11 @@ class Beer {
 
     getRandomBeer() {
         let ajaxOptions = {
-            dataType: 'json',
-            url: 'proxies/randombeer.php',
-            method:'get',
+            dataType: "json",
+            url: "proxies/randombeer.php",
+            method:"get",
             data: {
-                key: 'def197d76d55031bee5776225d9007b4',
+                key: "def197d76d55031bee5776225d9007b4",
                 abv: "",
                 hasLabels: "Y",
                 withBreweries: "Y",
@@ -19,10 +19,10 @@ class Beer {
         };
 
         $.ajax(ajaxOptions).then(function(response){
-            var beerName = response.data.name;
-            var beerDescription = response.data.style.description;
-            $('#beerName').text('Your random beer is ' + beerName + ': \n');
-            $('#beerDescription').text('Description: ' + beerDescription);
+            let beerName = response.data.name;
+            let beerDescription = response.data.style.description;
+            $('.beerName').text('Your random beer is ' + beerName);
+            $('.beerDescription').text('Description: ' + beerDescription);
             let breweryName = response.data.breweries[0].name;
             let breweryAddress = response.data.breweries[0].locations[0].streetAddress;
             let breweryLocality = response.data.breweries[0].locations[0].locality;

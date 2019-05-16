@@ -1,6 +1,5 @@
 class Youtube {
     constructor() {
-        this.getData = this.getData.bind(this);
     }
 
     getData(recipeTitle) {

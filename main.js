@@ -22,13 +22,13 @@ function createMeal() {
     var beerMap = $("<div>").addClass("map").appendTo(".contentBeer");
     
     var beer = new Beer();
-    var youTube = new Youtube();
     var recipe = new Recipes();
+    var youTube = new Youtube();
     recipe.getRecipeData(youTube.getData);
 }
 
 function recreateMeal() {
-    $(".youtubeFrame").remove(); 
+    $("iframe").remove(); 
     var recipe = new Recipes();
     var youTube = new Youtube();
     recipe.getRecipeData(youTube.getData);

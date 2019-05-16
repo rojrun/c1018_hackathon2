@@ -28,7 +28,7 @@ class Recipes {
         
         $.ajax(recipeObject).then(function(response){
             var recipeUrl = response.recipes[1].source_url;
-            var recipeIframe = $("<iframe>").attr("src", recipeUrl).addClass("youtubeFrame").appendTo(".recipe");
+            var recipeIframe = $("<iframe>").attr("src", recipeUrl).appendTo(".recipe");
         });
     }
 }

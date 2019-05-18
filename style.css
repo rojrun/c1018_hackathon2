@@ -1,12 +1,10 @@
-html {
+html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
     background-image: url('blue-bar.jpg');
     background-size: cover;
     background-position: center;
@@ -17,9 +15,9 @@ body {
 .title {
     text-align: center;
     color: ghostwhite;
-    font-size: 10em;
+    font-size: 3em;
     margin: 2% auto;
-    text-shadow: 10px 10px orangered;
+    text-shadow: 5px 5px orangered;
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,10 +26,15 @@ body {
 }
 
 .main_content {
-    height: 86%;
+    height: 88%;
     width: 100%;
-    top: 14%;
-    position: absolute;
+    top: 12%;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-items: stretch; */
 }
 
 .randomizerButton, .newRecipe, .newBeer {
@@ -41,7 +44,7 @@ body {
 }
 
 .randomizerButton {
-    font-size: 6em;
+    font-size: 2em;
     width: 80%;
     margin: auto;
     transform: translateY(30vh);
@@ -51,7 +54,8 @@ body {
 .contentRecipe, .contentBeer {
     width: 95%;
     margin: 0 auto;
-    height: 77%;
+    height: 70%;
+    flex: 1 0 auto;
 }
 
 .contentBeer {
@@ -60,18 +64,18 @@ body {
 
 .newRecipe, .newBeer {
     width: 50%;
-    font-size: 3em;
+    font-size: 1em;
 }
 
 .recipe {
-    height: 44%;
-    font-size: 4em;
+    height: 45%;
+    font-size: 1em;
     color: white;
     background: rgba(0, 0, 0, 0.7);
 }
 
 .youtube {
-    height: 50%;
+    height: 45%;
 }
 
 iframe {
@@ -80,7 +84,7 @@ iframe {
 }
 
 .beerName {
-    font-size: 4em;
+    font-size: 1em;
     color: white;
     background: rgba(0, 0, 0, 0.7);
 }
@@ -88,7 +92,7 @@ iframe {
 .beerDescription {
     height: 35%;
     color: orangered;
-    font-size: 3em;
+    font-size: 1em;
     background: rgba(0, 0, 0, 0.9);
     overflow: scroll;
 }

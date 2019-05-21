@@ -19,7 +19,7 @@ class Recipes {
             method: "get",
             dataType: "json",
             data: {
-                key: "074b75a8150c14232378c4a730358dc3",
+                key: recipeAPI,
                 page: this.randomPageNumber
             }
         }
@@ -27,9 +27,11 @@ class Recipes {
         $.ajax(recipeObject).then(this.sendDataToYoutube);
         
         $.ajax(recipeObject).then(function(response){
-            var recipeUrl = response.recipes[1].source_url;
-            var recipeIframe = $("<iframe>").attr("src", recipeUrl).appendTo(".recipe");
-            console.log("recipeIframe:", recipeIframe);
+            var sourceUrl = response.recipes[1].source_url;
+            var imageUrl = response.recipes[1].image_url;
+            var recipeImage = $("<img>").attr("src", imageUrl).addClass("recipeImage").appendTo(".recipe").click(function(){
+                window.open(sourceUrl, "_blank");
+            });
         });
     }
 }

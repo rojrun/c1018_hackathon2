@@ -10,7 +10,7 @@ class Coordinates {
             dataType: "json",
             method: "get",
             data: {
-                    key: "AIzaSyBwpExu5jdrkegxTZJE5VIKAJ7ED_yWTFE",
+                    key: coordinatesAPI,
                     address: this.address
             } 
         };

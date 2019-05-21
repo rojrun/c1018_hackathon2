@@ -64,10 +64,9 @@ body {
     background: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: calc(0.78vw + 13.51px);
-}    
+}  
 
-.recipe > iframe {
-    border: none;
+.recipeImage {
     height: calc(15.74vw + 120.62px);
     width: 100%;
 }
@@ -102,6 +101,6 @@ body {
     width: 100%;
 }
 
-.title:hover, .randomizerButton:hover, .newRecipe:hover, .newBeer:hover {
+.title:hover, .randomizerButton:hover, .newRecipe:hover, .newBeer:hover, .recipeImage:hover {
     cursor: pointer;
 }

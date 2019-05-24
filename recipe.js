@@ -29,7 +29,7 @@ class Recipes {
         $.ajax(recipeObject).then(function(response){
             var sourceUrl = response.recipes[1].source_url;
             var imageUrl = response.recipes[1].image_url;
-            var recipeImage = $("<img>").attr("src", imageUrl).addClass("recipeImage").appendTo(".recipe").click(function(){
+            $("<img>").attr("src", imageUrl).addClass("recipeImage").appendTo(".recipe").click(function(){
                 window.open(sourceUrl, "_blank");
             });
         });

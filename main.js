@@ -18,8 +18,8 @@ function createMeal() {
     var contentBeer = $("<div>").addClass("contentBeer").appendTo(".main_content");
     var newBeerBttn = $("<button>").addClass("newBeer").click(recreateBeer).text("New Beer").appendTo(".contentBeer");
     var beerName = $("<div>").addClass("beerName").appendTo(".contentBeer");
-    var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
     var beerMap = $("<div>").addClass("map").appendTo(".contentBeer");
+    var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
     
     var beer = new Beer();
     var recipe = new Recipes();

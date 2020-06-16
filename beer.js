@@ -9,10 +9,11 @@ class Beer {
             url: "proxies/randombeer.php",
             method:"get",
             data: {
+                url: "http://api.brewerydb.com/v2/beer/random",
                 key: beerAPI,
                 abv: "",
                 hasLabels: "Y",
-                withBreweries: "Y",
+                withBreweries: "Y"
             },
             errors: function(response){
             }

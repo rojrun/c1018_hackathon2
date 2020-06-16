@@ -15,10 +15,11 @@ class Recipes {
     getRecipeData(callBack) {
         this.callBack = callBack;
         var recipeObject = {
-            url: "https://www.food2fork.com/api/search",
+            url: "proxies/randombeer.php",
             method: "get",
             dataType: "json",
             data: {
+                url: "https://www.food2fork.com/api/search",
                 key: recipeAPI,
                 page: this.randomPageNumber
             }

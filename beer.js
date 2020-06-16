@@ -6,7 +6,8 @@ class Beer {
     getRandomBeer() {
         let ajaxOptions = {
             dataType: "json",
-            url: "proxies/randombeer.php",
+            // url: "proxies/randombeer.php",
+            url: "http://api.brewerydb.com/v2/beer/random",
             method:"get",
             data: {
                 key: beerAPI,

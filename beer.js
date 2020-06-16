@@ -6,16 +6,15 @@ class Beer {
     getRandomBeer() {
         let ajaxOptions = {
             dataType: "json",
-            url: "proxies/randombeer.php",
+            // url: "proxies/randombeer.php",
+            url: "http://api.brewerydb.com/v2/beer/random",
             method:"get",
             data: {
-                url: "http://api.brewerydb.com/v2/beer/random",
+                // url: "http://api.brewerydb.com/v2/beer/random",
                 key: beerAPI,
                 abv: "",
                 hasLabels: "Y",
                 withBreweries: "Y"
-            },
-            errors: function(response){
             }
         };
 

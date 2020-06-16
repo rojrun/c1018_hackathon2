@@ -22,16 +22,19 @@ function createMeal() {
     var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
     
     var beer = new Beer();
-    var recipe = new Recipes();
+    // var recipe = new Recipes();
+    var food = new Food();
     var youTube = new Youtube();
-    recipe.getRecipeData(youTube.getData);
+    // recipe.getRecipeData(youTube.getData);
+    food.getFoodItem(youTube.getData);
 }
 
 function recreateMeal() {
     $("iframe").remove(); 
-    var recipe = new Recipes();
+    // var recipe = new Recipes();
+    var food = new Food();
     var youTube = new Youtube();
-    recipe.getRecipeData(youTube.getData);
+    food.getFoodItem(youTube.getData);
 }
 
 function recreateBeer() {

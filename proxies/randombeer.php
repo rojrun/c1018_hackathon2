@@ -2,7 +2,7 @@
 
 // Determine what the main URL you will be using to communicate with the API
 // EXAMPLE - $proxyURL = "https://api.fortnitetracker.com/v1/profile/{$_GET['platform']}/{$_GET['player']}";
-$proxyURL = "http://api.brewerydb.com/v2/beer/random";
+$proxyURL = $_GET["url"];
 
 // OPTIONAL - Create a list of headers that API specfically needs for the request to be completed
 $acceptableHeaders = [];

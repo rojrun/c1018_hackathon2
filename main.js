@@ -4,37 +4,39 @@ function initializeApp() {
     $(".title").click(function() {
         location.reload();
     });
-    var randomizerButton = $("<button>").addClass("randomizerButton").click(createMeal).text("Click for Random Munchies and Beer").appendTo(".main_content");
+    $("<button>").addClass("randomizerButton").click(createMeal).text("Click for Random Beer and Munchies").appendTo(".main_content");
 }
 
 function createMeal() {
     $(".randomizerButton").remove();
-    
-    var contentRecipe = $("<div>").addClass("contentRecipe").appendTo(".main_content");
-    var newRecipeBttn = $("<button>").addClass("newRecipe").click(recreateMeal).text("New Recipe").appendTo(".contentRecipe");
-    var recipeContent = $("<div>").addClass("recipe").appendTo(".contentRecipe");
-    var youtubeContent = $("<div>").addClass("youtube").appendTo(".contentRecipe");
 
     var contentBeer = $("<div>").addClass("contentBeer").appendTo(".main_content");
     var newBeerBttn = $("<button>").addClass("newBeer").click(recreateBeer).text("New Beer").appendTo(".contentBeer");
     var beerName = $("<div>").addClass("beerName").appendTo(".contentBeer");
     var beerMap = $("<div>").addClass("map").appendTo(".contentBeer");
     var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
+
+    var contentRecipe = $("<div>").addClass("contentRecipe").appendTo(".main_content");
+    var newRecipeBttn = $("<button>").addClass("newRecipe").click(recreateMeal).text("New Recipe").appendTo(".contentRecipe");
+    var recipeTitle = $("<div>").addClass("recipeTitle").appendTo(".contentRecipe");
+    var recipeIngredients = $("<div>").addClass("recipeIngredients").appendTo(".contentRecipe");
+    var youtubeContent = $("<div>").addClass("youtube").appendTo(".contentRecipe");
     
     var beer = new Beer();
-    var recipe = new Recipes();
+    var food = new Food();
     var youTube = new Youtube();
-    recipe.getRecipeData(youTube.getData);
+    food.getFoodItem(youTube.getData);
 }
 
 function recreateMeal() {
     $("iframe").remove(); 
-    var recipe = new Recipes();
+    var food = new Food();
     var youTube = new Youtube();
-    recipe.getRecipeData(youTube.getData);
+    food.getFoodItem(youTube.getData);
 }
 
 function recreateBeer() {
+    $(".contentBeer").remove();
     new Beer();
 }
 

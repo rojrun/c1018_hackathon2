@@ -28,16 +28,16 @@ function createMeal() {
     food.getFoodItem(youTube.getData);
 }
 
+function recreateBeer() {
+    $(".beerName, .map, .beerDescription").empty();
+    new Beer();
+}
+
 function recreateMeal() {
-    $("iframe").remove(); 
+    $(".recipeTitle, .recipeIngredients, .youtube").empty(); 
     var food = new Food();
     var youTube = new Youtube();
     food.getFoodItem(youTube.getData);
-}
-
-function recreateBeer() {
-    $(".contentBeer").remove();
-    new Beer();
 }
 
 function initMap(location, title) {

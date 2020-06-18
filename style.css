@@ -37,10 +37,6 @@ body {
     width: 100%;
 }
 
-h3, p {
-    margin: 0;
-}
-
 .randomizerButton, .newRecipe, .newBeer {
     background: rgba(255, 69, 0, 0.5);
     border-radius: 1em;

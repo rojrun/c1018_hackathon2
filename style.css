@@ -37,10 +37,6 @@ body {
     width: 100%;
 }
 
-h3, p {
-    margin: 0;
-}
-
 .randomizerButton, .newRecipe, .newBeer {
     background: rgba(255, 69, 0, 0.5);
     border-radius: 1em;
@@ -85,6 +81,16 @@ h3, p {
 .youtube {
     height: calc(15.74vw + 120.62px);
     width: 100%;
+    position: relative;
+}
+
+
+.loader {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 50%;
+    width: 40%;
 }
 
 .youtube > iframe {
@@ -99,9 +105,13 @@ h3, p {
     font-size: calc(0.78vw + 13.51px);
 }
 
-.beerDescription {
+.breweryInfo, .beerDescription {
     background: rgba(0, 0, 0, 0.7);
     color: orangered;
+}
+
+blockquote {
+    font-size: 1.2em;
 }
 
 .map {

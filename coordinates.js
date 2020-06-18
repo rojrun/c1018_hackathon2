@@ -14,6 +14,7 @@ class Coordinates {
                     address: this.address
             } 
         };
+        
         $.ajax(addressObject).then(function(response){
             let newCoordinates = response.results[0].geometry.location;
             callback(newCoordinates, title);

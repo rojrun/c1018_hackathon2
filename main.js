@@ -1,6 +1,6 @@
 $(document).ready(initializeApp);
 
-function initializeApp() {
+function initializeApp() {  //landing page with title and start button
     $(".title").click(function() {
         location.reload();
     });
@@ -10,12 +10,15 @@ function initializeApp() {
 function createMeal() {
     $(".randomizerButton").remove();
 
+    //beer content with button
     var contentBeer = $("<div>").addClass("contentBeer").appendTo(".main_content");
     var newBeerBttn = $("<button>").addClass("newBeer").click(recreateBeer).text("New Beer").appendTo(".contentBeer");
     var beerName = $("<div>").addClass("beerName").appendTo(".contentBeer");
+    var breweryInfo = $("<div>").addClass("breweryInfo").appendTo(".contentBeer");
     var beerMap = $("<div>").addClass("map").appendTo(".contentBeer");
     var beerDescription = $("<div>").addClass("beerDescription").appendTo(".contentBeer");
 
+    //recipe content with button
     var contentRecipe = $("<div>").addClass("contentRecipe").appendTo(".main_content");
     var newRecipeBttn = $("<button>").addClass("newRecipe").click(recreateMeal).text("New Recipe").appendTo(".contentRecipe");
     var recipeTitle = $("<div>").addClass("recipeTitle").appendTo(".contentRecipe");
@@ -28,19 +31,19 @@ function createMeal() {
     food.getFoodItem(youTube.getData);
 }
 
+function recreateBeer() {
+    $(".beerName, .breweryInfo, .map, .beerDescription").empty(); //deletes children nodes of .contentBeer
+    new Beer();
+}
+
 function recreateMeal() {
-    $("iframe").remove(); 
+    $(".recipeTitle, .recipeIngredients, .youtube").empty(); //deletes children nodes of .contentRecipe
     var food = new Food();
     var youTube = new Youtube();
     food.getFoodItem(youTube.getData);
 }
 
-function recreateBeer() {
-    $(".contentBeer").remove();
-    new Beer();
-}
-
-function initMap(location, title) {
+function initMap(location, title) { //gets brewery address from beer.js and displays on google map
     var newLocation = location;
     var map = new google.maps.Map(
         $('.map')[0], {zoom: 6, center: newLocation});

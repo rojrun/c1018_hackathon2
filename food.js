@@ -4,10 +4,10 @@ class Food {
     }
 
     getFoodItem(callback) {
-        var proteinArray = ["chicken", "fish", "pork", "lamb", "steak", "snacks"];
-        var protein = proteinArray[Math.floor(Math.random() * proteinArray.length)];
+        var proteinArray = ["chicken", "fish", "pork", "lamb", "steak", "snacks"]; 
+        var protein = proteinArray[Math.floor(Math.random() * proteinArray.length)]; //randomizing through protein array
         var foodObject = {
-            url: "proxies/randombeer.php",
+            url: "proxies/randombeer.php", //using proxy for CORS policy
             method: "get",
             dataType: "json",
             data: {

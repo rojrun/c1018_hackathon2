@@ -61,13 +61,17 @@ body {
     width: 50%;
 }
 
-.recipe {
+.recipeTitle {
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    font-size: calc(0.78vw + 13.51px);
-    height: calc(16.52vw + 134.13px);
-    width: 100%; 
-}  
+    width: 100%;
+}
+
+.recipeIngredients {
+    background: rgba(0, 0, 0, 0.7);
+    color: orangered;
+    width: 100%;
+}
 
 .recipeImage {
     height: calc(15.74vw + 120.62px);
@@ -77,6 +81,16 @@ body {
 .youtube {
     height: calc(15.74vw + 120.62px);
     width: 100%;
+    position: relative;
+}
+
+
+.loader {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 50%;
+    width: 40%;
 }
 
 .youtube > iframe {
@@ -91,10 +105,13 @@ body {
     font-size: calc(0.78vw + 13.51px);
 }
 
-.beerDescription {
-    background: rgba(0, 0, 0, 0.8);
+.breweryInfo, .beerDescription {
+    background: rgba(0, 0, 0, 0.7);
     color: orangered;
-    font-size: calc(0.58vw + 14.13px);
+}
+
+blockquote {
+    font-size: 1.2em;
 }
 
 .map {

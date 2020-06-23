@@ -10,22 +10,20 @@ html, body {
 
 body {
     background-attachment: fixed;
-    background-image: url("blue-bar.jpg");
+    background-image: url("images/blue-bar.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-weight: 300;
 }
 
 .title {
-    background: rgba(39, 33, 171, 0.5);
-    color: ghostwhite;
+    color: #cc1b1b;
     font-size: calc(3.11vw + 38.05px);
     font-weight: 600;
     height: calc(4.18vw + 54.63px);
     position: fixed;
     text-align: center;
-    text-shadow: 5px 5px orangered;
+    text-shadow: 5px 5px #eeba7a;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -43,9 +41,9 @@ body {
 }
 
 .randomizerButton, .newRecipe, .newBeer {
-    background: rgba(255, 69, 0, 0.5);
+    background: #cc1b1b;
     border-radius: 1em;
-    color: white;
+    color: #D7AC77;
     font-weight: 500;
 }
 
@@ -69,14 +67,15 @@ body {
 }
 
 .recipeTitle {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    background: black;
+    color: 	#c1853b;
+    font-size: calc(0.78vw + 13.51px);
     width: 100%;
 }
 
 .recipeIngredients {
-    background: rgba(0, 0, 0, 0.7);
-    color: orangered;
+    background: black;
+    color: #cc1b1b;
     width: 100%;
 }
 
@@ -88,36 +87,39 @@ body {
 .youtube {
     height: calc(15.74vw + 120.62px);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 
 .loader {
+    flex-shrink: 0;
+    height: 100%;
     position: absolute;
-    top: 20%;
-    left: 30%;
-    height: 50%;
-    width: 40%;
 }
 
 .youtube > iframe {
+    flex-shrink: 0;
     width: 100%;
     height: 100%;
     border: none;
 }
 
 .beerName {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    background: black;
+    color: 	#c1853b;
     font-size: calc(0.78vw + 13.51px);
 }
 
 .breweryInfo, .beerDescription {
-    background: rgba(0, 0, 0, 0.7);
-    color: orangered;
+    background: black;
+    color: #cc1b1b;
 }
 
 p, blockquote {
+    font-weight: 400;
     line-height: 150%;
 }
 

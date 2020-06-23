@@ -47,7 +47,7 @@ function initMap(location, title) { //gets brewery address from beer.js and disp
     var newLocation = location;
     var map = new google.maps.Map(
         $('.map')[0], {zoom: 6, center: newLocation});
-    var image = 'beerglasses.png';
+    var image = 'images/beerglasses.png';
     var marker = new google.maps.Marker({
         icon: image,
         position: newLocation,

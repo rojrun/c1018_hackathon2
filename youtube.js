@@ -18,7 +18,7 @@ class Youtube {
         $.ajax(ajaxOptions).then(function (response) {
             var videoUrl = response.video[0].id;
             var iframe = $("<iframe>").attr("src", "https://www.youtube.com/embed/" + videoUrl).appendTo(".youtube");   
-            var loader = $("<img>").attr("src", "beerglasses.png").addClass("loader").appendTo(".youtube");
+            var loader = $("<img>").attr("src", "images/cooking.png").addClass("loader").appendTo(".youtube");
             $(iframe).on("load", function() {
                 $(loader).hide();
             });

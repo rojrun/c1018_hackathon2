@@ -5,7 +5,7 @@ class Youtube {
 
     getData(foodTitle) {
         var ajaxOptions = {
-            url: 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
+            url: 'https://s-apis.learningfuze.com/hackathon/youtube/search.php',
             method: 'post',
             dataType: 'json',
             data: {

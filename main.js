@@ -1,8 +1,12 @@
 $(document).ready(initializeApp);
 
 function initializeApp() {  //landing page with title and start button
+    $(window).on("unload", function() {
+        $(window).scrollTop(0);
+    });
     $(".title").click(function() {
         location.reload();
+        $(document).scrollTop(0);
     });
     $("<button>").addClass("randomizerButton").click(createMeal).text("Click for Random Beer and Munchies").appendTo(".main_content");
 }
@@ -47,12 +51,9 @@ function initMap(location, title) { //gets brewery address from beer.js and disp
     var newLocation = location;
     var map = new google.maps.Map(
         $('.map')[0], {zoom: 6, center: newLocation});
-    var image = 'images/beerglasses.png';
     var marker = new google.maps.Marker({
-        icon: image,
         position: newLocation,
-        map: map,
-        label: 'Brewery Location'
+        map: map
     });
     var info = new google.maps.InfoWindow({
         content: title

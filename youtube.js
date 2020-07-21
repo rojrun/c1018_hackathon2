@@ -5,13 +5,13 @@ class Youtube {
 
     getData(foodTitle) {
         var ajaxOptions = {
-            url: 'https://s-apis.learningfuze.com/hackathon/youtube/search.php',
-            method: 'post',
-            dataType: 'json',
+            url: "http://s-apis.learningfuze.com/hackathon/youtube/search.php",
+            method: "post",
+            dataType: "json",
             data: {
                 q: "how to cook " + foodTitle,
                 maxResults: 1,
-                type: 'video',
+                type: "video",
             }
         };
         

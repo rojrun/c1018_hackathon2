@@ -51,6 +51,7 @@ body {
     font-size: calc(3.11vw + 22.05px);
     line-height: 120%;
     margin: 0 auto;
+    padding: 3%;
     transform: translateY(30vh);
     width: 50%;
 }
@@ -59,6 +60,14 @@ body {
     flex: 1 0 300px;
     margin: 3%;
     min-height: calc(33.53vw + 277.71px);
+}
+
+h3, .breweryInfo > p, .breweryInfo > blockquote, .beerDescription > p, .recipeIngredients > p {
+    padding: 2%;
+}
+
+.breweryInfo > p {
+    margin-bottom: 0;
 }
 
 .newRecipe, .newBeer {
@@ -125,6 +134,7 @@ p, blockquote {
 
 blockquote {
     font-size: 1.2em;
+    margin-top: 0;
 }
 
 .map {
